@@ -1,0 +1,114 @@
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+#container {
+    display: flex;
+    height: 100%;
+    background-color: black;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border-bottom: 1px solid white;
+}
+
+.title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+
+
+#board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+.square{
+    border: 1px solid white;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#keyboard-container {
+    height: 200px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100;
+    margin: 0 auto 8px;
+    touch-action: manipulation;
+}
+
+.keyboard-row button {
+    font-family: inherit;
+    font-weight: bold;
+    background-color: lightgreen;
+    border: none;
+    padding: 0;
+    height: 58px;
+    cursor: pointer;
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin-right: 6px;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.keyboard-row button:hover {
+    background-color: green;
+    color: white;
+}
+
+.keyboard-row button.wide-button {
+    flex-grow: 1.5;
+}
+
+.spacer-half {
+    flex-grow: 0.5;
+}
